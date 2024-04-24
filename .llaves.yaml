@@ -1,0 +1,6 @@
+# This file is to be gitignored
+# Add your project secrets here
+password:
+  data: "password123"
+  labels:
+    label1: "example"
