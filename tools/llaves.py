@@ -87,7 +87,7 @@ def run(passphrase: str, command: list, parallel=False):
     env_prefix = 'PRIVATE'
     env = os.environ.copy()
     for name, attrs in secrets.items():
-        env[f'{env_prefix}__{name}'] = attrs['data']
+        env[f'{env_prefix}__{name}'] = str(attrs['data'])
     p = subprocess.Popen(command, env=env)
     if not parallel:
         p.wait()
